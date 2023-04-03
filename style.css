@@ -1,0 +1,153 @@
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+}
+.ideContainer{
+    background-color: #1E1E1E;
+    width: 1300px;
+    height: 800px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.explorerContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #252526;
+    width: 180px;
+    height: 800px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: height 0.2s ease-in-out;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 180px;
+    background-color: #252526;
+    width: 1120px;
+    height: 40px;
+    border-top-right-radius: 10px;
+    font-size: 0;
+}
+
+.startNavbar, .aboutmeNavbar, .contactNavbar{
+    font-size: 14px !important;
+    text-align: left;
+	background: #2D2D2D;
+    width: 120px;
+    height: 40px;
+	color: #969696;
+	border: none;
+	padding: 0;
+    margin: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit
+}
+
+.active-topnav{
+    color: white;
+    background-color: #1E1E1E;
+}
+
+.active-sidenav{
+    background-color: #37373D;
+}
+
+#imgA{
+    width: 12px;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+#imgB{
+    width: 12px;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.startExplorer, .aboutmeExplorer, .contactExplorer{
+    font-size: 14px !important;
+	color: #b6b6b6;
+	padding-left: 15px;
+    margin: 0;
+    list-style-type: none;
+    width: 180px;
+    height: 20px;
+}
+
+.navbarExplorerContainer{
+    padding: 0;
+}
+
+.startExplorer:hover, .aboutmeExplorer:hover, .contactExplorer:hover{
+    background-color: #2A2D2E;
+    cursor: pointer;
+}
+
+.sidenav-buttons {
+    font-size: 0;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.3s ease;
+}
+
+#toggle-sidenav {
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.toggleSideNav{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    text-align: left;
+    width: 180px;
+	background: #252526;
+	color: #b4b2b2;
+	border: none;
+	padding: 0;
+    margin: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit
+}
+
+.explorerText{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: 12px !important;
+    color: #b4b2b2;
+    width: 180px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+    height: 30px;
+}
+
+.material-symbols-outlined {
+    width: 20px;
+    padding-bottom: 4px;
+    
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+
+@keyframes arrow-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
