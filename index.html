@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -17,39 +18,39 @@
 <body>
     <div class="ideContainer">
         <div class="navbar">
-            <button class="startNavbar" id="topnav-start" onclick="changeColor(this)"> <img
+            <button class="startNavbar" id="topnav-start" onclick="changeColor(this, false)"> <img
                     src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png"
                     alt="" style="vertical-align:middle" id="imgA"> Start.html</button>
-            <button class="aboutmeNavbar" id="topnav-about" onclick="changeColor(this)"><img
+            <button class="aboutmeNavbar" id="topnav-about" onclick="changeColor(this, false)"><img
                     src="https://cdn.cdnlogo.com/logos/c/18/css.svg" alt="" style="vertical-align:middle"
                     id="imgA">AboutMe.css</button>
-            <button class="contactNavbar" id="topnav-contact" onclick="changeColor(this)"><img src="js.png" alt=""
+            <button class="contactNavbar" id="topnav-contact" onclick="changeColor(this, false)"><img src="js.png" alt=""
                     style="vertical-align:middle" id="imgB">Contact.js</button>
         </div>
 
         <div class="explorerContainer">
 
-                <p class="explorerText">EXPLORER</p>
+            <p class="explorerText">EXPLORER</p>
 
-                <button id="toggle-sidenav" class="toggleSideNav" onclick="toggleSidenav()">
-                    <span style="vertical-align:middle" class="material-symbols-outlined" id="toggleNavArrow">
-                        expand_more
-                        </span>
-                        PORTFOLIO</button>
+            <button id="toggle-sidenav" class="toggleSideNav" onclick="toggleSidenav()">
+                <span style="vertical-align:middle" class="material-symbols-outlined" id="toggleNavArrow">
+                    expand_more
+                </span>
+                PORTFOLIO</button>
 
             <div class="sidenav-buttons">
                 <ul class="navbarExplorerContainer">
-                    <li class="startExplorer" id="sidenav-start" onclick="changeColor(this)">
+                    <li class="startExplorer" id="sidenav-start" onclick="changeColor(this, true)">
                         <img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png"
                             alt="" style="vertical-align:middle" id="imgA">
                         Start.html
                     </li>
-                    <li class="aboutmeExplorer" id="sidenav-about" onclick="changeColor(this)">
+                    <li class="aboutmeExplorer" id="sidenav-about" onclick="changeColor(this, true)">
                         <img src="https://cdn.cdnlogo.com/logos/c/18/css.svg" alt="" style="vertical-align:middle"
                             id="imgA">
                         AboutMe.css
                     </li>
-                    <li class="contactExplorer" id="sidenav-contact" onclick="changeColor(this)">
+                    <li class="contactExplorer" id="sidenav-contact" onclick="changeColor(this, true)">
                         <img src="js.png" alt="" style="vertical-align:middle" id="imgB">
                         Contact.js
                     </li>
@@ -57,7 +58,54 @@
             </div>
         </div>
         <div class="codeField">
+            <img src="arrow.png" alt="arrow pointing to buttons" id="clickMe">
+            <div class="content-section" id="start-content">
+                <span id="chevron">&lt;!</span> <span id="element">DOCTYPE </span><span id="attribute">html</span> <span
+                    id="chevron">&gt;</span> <br>
 
+                <span id="chevron">&lt;</span> <span id="element">html</span><span id="attribute"> lang</span> <span
+                    id="normalText">=</span> <span id="class">"en"</span><span id="chevron"> &gt;</span> <br>
+
+                <span id="chevron">&lt;</span> <span id="element">head</span><span id="chevron">&gt;</span> <br>
+                <div class="headContainer">
+                    <span id="chevron">&lt;</span> <span id="element">meta </span><span id="attribute">charset</span>
+                    <span id="normalText">=</span><span id="class">"UTF-8"</span><span id="chevron">&gt;</span> <br>
+
+                    <span id="chevron">&lt;</span> <span id="element">meta </span><span id="attribute">http-equiv</span>
+                    <span id="normalText">=</span><span id="class">"X-UA-Compatible"</span><span
+                        id="attribute">content</span> <span id="normalText">=</span><span id="class">"IE=edge"</span>
+                    <span id="chevron">&gt;</span> <br>
+
+
+                    <span id="chevron">&lt;</span> <span id="element">meta </span><span id="attribute">name</span>
+                    <span id="normalText">=</span><span id="class">"viewport"</span><span id="attribute">content</span>
+                    <span id="normalText">=</span><span id="class">"width=device-width, initial-scale=1.0"</span> <span
+                        id="chevron">&gt;</span> <br>
+
+
+                    <span id="chevron">&lt;</span> <span id="element">title</span><span id="chevron">&gt;</span><span
+                        id="normalText">Document</span><span id="chevron">&lt;/</span>
+                    <span id="element">title</span><span id="chevron">&gt;</span> <br>
+                </div>
+                <span id="chevron">&lt;/</span><span id="element">head</span><span id="chevron">&gt;</span> <br>
+
+                <span id="chevron">&lt;</span> <span id="element">body</span><span id="chevron">&gt;</span> <br>
+                <div class="body">
+                    <span id="chevron">&lt;/</span><span id="element">h1</span><span id="chevron">&gt;</span><span id="normalText">Welcome to my portfolio!</span><span id="chevron">&lt;/</span><span id="element">h1</span><span id="chevron">&gt;</span> <br>
+                    <br>
+                    <span id="chevron">&lt;/</span><span id="element">h2</span><span id="chevron">&gt;</span><span id="normalText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aspernatur.</span><span id="chevron">&lt;/</span><span id="element">h2</span><span id="chevron">&gt;</span> <br>
+                    <br>
+                    <span id="chevron">&lt;/</span><span id="element">p</span><span id="chevron">&gt;</span><span id="normalText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis laboriosam nam repellendus illum praesentium. Maiores, maxime laborum. Recusandae numquam dolorem enim accusantium ea distinctio odio sequi asperiores architecto. Ipsam, temporibus!</span><span id="chevron">&lt;/</span><span id="element">p</span><span id="chevron">&gt;</span> <br>
+
+                </div>
+                <span id="chevron">&lt;/</span><span id="element">body</span><span id="chevron">&gt;</span> <br>
+
+                <span id="chevron">&lt;/</span><span id="element">html</span><span id="chevron">&gt;</span> <br>
+            </div>
+            <div class="content-section" id="about-content">
+            </div>
+            <div id="contact-content" class="content-section">
+            </div>
         </div>
     </div>
 
