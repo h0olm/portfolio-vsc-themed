@@ -1,29 +1,36 @@
 let activeTopnavButton;
 let activeSidenavButton;
 
-function changeColor(button) {
-    const navType = button.tagName === 'BUTTON' ? 'topnav' : 'sidenav';
+// script.js
+function changeColor(button, isSideNav) {
+    const contentId = button.id.split('-')[1];
+    updateButtonColors(isSideNav ? '.navbarExplorerContainer li' : '.navbar button', contentId, isSideNav);
+    updateButtonColors(isSideNav ? '.navbar button' : '.navbarExplorerContainer li', contentId, !isSideNav);
 
-    if (navType === 'topnav') {
-        if (activeTopnavButton) {
-            activeTopnavButton.classList.remove('active-topnav');
-        }
+    // Show the associated div for the clicked button
+    showContent(contentId + '-content');
+}
 
-        button.classList.add('active-topnav');
-        activeTopnavButton = button;
+function updateButtonColors(selector, contentId, isSideNav) {
+    const allButtons = document.querySelectorAll(selector);
 
-        changeColor(document.getElementById(`sidenav-${button.id.split('-')[1]}`));
-    } else if (navType === 'sidenav') {
-        if (activeSidenavButton) {
-            activeSidenavButton.classList.remove('active-sidenav');
-        }
+    for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].style.backgroundColor = '';
+        allButtons[i].style.color = '';
+    }
 
-        button.classList.add('active-sidenav');
-        activeSidenavButton = button;
+    const activeButtonId = (isSideNav ? 'sidenav' : 'topnav') + '-' + contentId;
+    const activeButton = document.getElementById(activeButtonId);
+    const clickMeArrow = document.getElementById('clickMe')
 
-        changeColor(document.getElementById(`topnav-${button.id.split('-')[1]}`));
+    if (activeButton) {
+        activeButton.style.backgroundColor = isSideNav ? '#37373D' : '#1E1E1E';
+        activeButton.style.color = 'white';
+        clickMeArrow.classList.add('hideArrow')
     }
 }
+
+
 
 
 function toggleSidenav() {
@@ -39,5 +46,25 @@ function toggleSidenav() {
         toggleButton.innerHTML = 'chevron_right';
     }
 }
+
+
+
+function showContent(contentId) {
+    const contentSections = document.querySelectorAll('.content-section');
+
+    for (let i = 0; i < contentSections.length; i++) {
+        if (contentSections[i].id === contentId) {
+            contentSections[i].style.display = 'block';
+        } else {
+            contentSections[i].style.display = 'none';
+        }
+    }
+}
+
+const contentSections = document.querySelectorAll('.content-section');
+for (let i = 0; i < contentSections.length; i++) {
+    contentSections[i].style.display = 'none';
+}
+
 
 
